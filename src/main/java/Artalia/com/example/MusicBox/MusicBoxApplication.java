@@ -17,7 +17,7 @@ public class MusicBoxApplication implements CommandLineRunner {
 	public void run(String[] args){
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run(){
-				//new MainFrame();
+				new MainFrame();
 			}
 		});
 	}
