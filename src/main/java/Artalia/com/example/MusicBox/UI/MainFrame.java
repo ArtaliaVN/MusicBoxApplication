@@ -2,8 +2,10 @@ package Artalia.com.example.MusicBox.UI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+
 import Artalia.com.example.MusicBox.STATS.constant;
 
 public class MainFrame {
@@ -19,8 +21,8 @@ public class MainFrame {
         centralScreen = new CentralScreen();
         searchFrame = new SearchCard();
         borderLayout = new BorderLayout();
-        borderLayout.setHgap(10);
-        borderLayout.setVgap(10);
+        borderLayout.setHgap(5);
+        borderLayout.setVgap(5);
         
         frame.setTitle("Music box");
         frame.setSize(constant.initializeWidth, constant.initializeHeight);
@@ -34,7 +36,7 @@ public class MainFrame {
         searchFrame.addComponent();
 
         centralScreen.addCard("searchFrame", searchFrame);
-        leftTool.setRoundness(30);
+        leftTool.setRoundness(10);
         leftTool.addComponent();
         leftTool.setMouseAdapter();
         frame.add(leftTool, BorderLayout.WEST);

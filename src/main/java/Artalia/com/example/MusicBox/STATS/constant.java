@@ -14,6 +14,7 @@ public class constant {
     public final static int initializeHeight = 500;
     public final static int chipWidth = 150;
     public final static int chipHeight = 250;
+    public final static int thumbSize = 100;
 
     //Spotify API information
     public final static String SpotifyPlayBackSDK = "https://sdk.scdn.co/spotify-player.js";

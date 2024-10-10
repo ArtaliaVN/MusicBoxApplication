@@ -2,10 +2,12 @@ package Artalia.com.example.MusicBox.UI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+
 import javax.swing.BorderFactory;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+
 import Artalia.com.example.MusicBox.STATS.constant;
 
 public class DisplayPanel extends CustomizePanel {
@@ -14,7 +16,7 @@ public class DisplayPanel extends CustomizePanel {
     private JPanel panel;
     
     public DisplayPanel(){
-        setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+        setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         setLayout(new BorderLayout());
         panel = new JPanel();
         panel.setBackground(Color.decode(constant.secondColor));
@@ -23,6 +25,7 @@ public class DisplayPanel extends CustomizePanel {
         jScrollPane.setOpaque(false);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane.setVerticalScrollBar(new CustomizeJScrollBar());
         add(jScrollPane, BorderLayout.CENTER);
     }
 

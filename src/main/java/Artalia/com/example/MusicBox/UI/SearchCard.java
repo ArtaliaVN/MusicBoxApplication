@@ -2,8 +2,10 @@ package Artalia.com.example.MusicBox.UI;
 
 import java.awt.Color;
 import java.awt.Dimension;
+
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+
 import Artalia.com.example.MusicBox.STATS.constant;
 
 public class SearchCard extends CustomizePanel {
@@ -19,17 +21,17 @@ public class SearchCard extends CustomizePanel {
 
     public void addComponent(){
         add(searchPanel);
-        add(Box.createRigidArea(new Dimension(0, 10)));
+        add(Box.createRigidArea(new Dimension(0, 5)));
         add(displayPanel);
         setBackground(Color.decode(constant.firstColor));
 
         searchPanel.setMaximumSize(new Dimension(5000, constant.searchPanelHeight));
         searchPanel.addComponent();
-        searchPanel.setRoundness(30);
+        searchPanel.setRoundness(10);
         searchPanel.setBackground(Color.decode(constant.secondColor));
         
         displayPanel.setBackground(Color.decode(constant.secondColor));
-        displayPanel.setRoundness(30);
+        displayPanel.setRoundness(10);
         
         displayPanel.addCard(new SongChip(constant.chipWidth, constant.chipHeight, 30));
         displayPanel.addCard(new SongChip(constant.chipWidth, constant.chipHeight, 30));

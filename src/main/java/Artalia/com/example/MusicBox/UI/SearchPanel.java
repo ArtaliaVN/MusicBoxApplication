@@ -18,7 +18,7 @@ public class SearchPanel extends CustomizePanel {
     public void addComponent(){
         searchIcon = new ImageIcon("src\\main\\java\\Artalia\\com\\example\\MusicBox\\UI\\ICONS\\searchIcon.jpg");
         searchField.setPreferredSize(new Dimension(300,25));
-        searchField.setRoundness(20);
+        searchField.setRoundness(10);
         searchBtn.setIcon(searchIcon);
         searchBtn.setPreferredSize(new Dimension(25,25));
         add(searchField);
