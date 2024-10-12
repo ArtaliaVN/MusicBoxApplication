@@ -1,21 +1,21 @@
 package Artalia.com.example.MusicBox.UI;
 
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JScrollBar;
 import javax.swing.plaf.basic.BasicScrollBarUI;
-
-import Artalia.com.example.MusicBox.STATS.constant;
 
 public class CustomizeJScrollBarUI extends BasicScrollBarUI {
     
     public CustomizeJScrollBarUI(){}
     
+    /* 
     @Override
     protected Dimension getMaximumThumbSize(){
         return switch (scrollbar.getOrientation()) {
@@ -31,6 +31,18 @@ public class CustomizeJScrollBarUI extends BasicScrollBarUI {
             default -> new Dimension(constant.thumbSize, 0);
         };
     }
+    */
+
+    @Override
+    protected JButton createIncreaseButton(int i){
+        return new CustomizeJScrollButton();
+    }
+
+    @Override
+    protected JButton createDecreaseButton(int i){
+        return new CustomizeJScrollButton();
+    }
+
 
     @Override
     protected void paintTrack(Graphics g, JComponent component, Rectangle rect){
@@ -40,14 +52,14 @@ public class CustomizeJScrollBarUI extends BasicScrollBarUI {
         int size, x, y, width, height;
         switch(orientation){
             case JScrollBar.VERTICAL -> {
-                size = rect.width/2;
+                size = rect.width;
                 x = rect.x+((rect.width-size)/2);
                 y = rect.y;
                 width = size;
                 height = rect.height;
             }
             default -> {
-                size = rect.height/2;
+                size = rect.height;
                 x = 0;
                 y = rect.y+((rect.height-size)/2);
                 width = rect.width;
@@ -78,4 +90,13 @@ public class CustomizeJScrollBarUI extends BasicScrollBarUI {
         g2D.setColor(scrollbar.getForeground());
         g2D.fillRoundRect(x, y, width, height, 10, 10);
     }
+}
+
+class CustomizeJScrollButton extends JButton {
+    public CustomizeJScrollButton(){
+        setBorder(BorderFactory.createEmptyBorder());
+    }
+
+    @Override
+    public void paint(Graphics g){}
 }

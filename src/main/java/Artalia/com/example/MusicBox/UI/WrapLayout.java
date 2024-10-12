@@ -1,12 +1,16 @@
 package Artalia.com.example.MusicBox.UI;
 
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Insets;
+
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 public class WrapLayout extends FlowLayout
 {
-	private Dimension preferredLayoutSize;
 
 	public WrapLayout()
 	{
@@ -41,7 +45,7 @@ public class WrapLayout extends FlowLayout
 	{
 		synchronized (target.getTreeLock())
 		{
-			int targetWidth = target.getSize().width;
+			int targetWidth;
 			Container container = target;
 
 			while (container.getSize().width == 0 && container.getParent() != null)

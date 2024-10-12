@@ -3,9 +3,11 @@ package Artalia.com.example.MusicBox.UI;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.border.EmptyBorder;
+
 import Artalia.com.example.MusicBox.Control.navigationBtnController;
 import Artalia.com.example.MusicBox.STATS.constant;
 
@@ -30,7 +32,7 @@ public class LeftTool extends CustomizePanel{
         add(libButton);
 
         label.setFont(new Font("Arial", Font.BOLD, 24));
-        label.setText(new String("Music box"));
+        label.setText("Music box");
         label.setForeground(Color.WHITE);
         label.setBorder(new EmptyBorder(20, 10, 10, 10));
 
